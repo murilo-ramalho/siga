@@ -1,9 +1,27 @@
 const axios = require("axios");
+const { response } = require("express");
 
 class Arquivo {
   constructor(req, res) {
     this.req = req;
     this.res = res;
+  }
+
+  exibirTodos(){
+    let arquivo = this.req.body.arquivo;
+
+    axios
+      .get("https://6b8e7676-8581-4b94-867e-7b0aa6be4019.mock.pstmn.io/professores" + arquivo)
+      .then((response) => {
+        console.log(response.value);
+        this.res.render("home/index", {
+          nome: response.value.nome,
+          matricula: response.value.matricula,
+        });
+      })
+      .catch((e) => {
+        this.res.render("arquivo/erro");
+      });
   }
 
   exibir() {
@@ -13,7 +31,7 @@ class Arquivo {
       .get("https://6b8e7676-8581-4b94-867e-7b0aa6be4019.mock.pstmn.io/professor/:matricula" + arquivo)
       .then((response) => {
         console.log(response.data);
-        this.res.render("arquivo/exibirProf", {
+        this.res.render("arquivo/exibir", {
           datetime: response.data.datetime,
           value: response.data.value,
         });
@@ -28,7 +46,7 @@ class Arquivo {
     let texto = this.req.body.texto;
 
     axios
-      .post("https://6b8e7676-8581-4b94-867e-7b0aa6be4019.mock.pstmn.io/professor/:matricula", {
+      .post("https://6b8e7676-8581-4b94-867e-7b0aa6be4019.mock.pstmn.io/professor", {
         arquivo: arquivo,
         texto: texto,
       })

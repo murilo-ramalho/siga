@@ -1,0 +1,23 @@
+<html style="font-family: Arial">
+  <div style="background-color: rgba(206, 82, 82, 0.527); margin-bottom: 5px; border-radius: 10px; border: 1px solid black">
+    <h1 style="margin-top: 10px; margin-left: 30px; font-size: 40px;">Adicionar Professor</h1>
+  </div>
+
+  <div style="font-size: 150%; margin-left: 50px; font-weight: bold; border: 2px solid black; border-radius: 10px; padding: 15px;">
+    <form action="./cadastrar" method="POST">
+      <label for="NomeProfessor">Nome do Professor:</label>
+      <br />
+      <input type="text" id="NomeProfessor" name="NomeProfessor" required style="width: 90%; padding: 10px; border: 2px solid black; margin-bottom: 20px;"/>
+      <br />
+      <label for="MatriculaProfessor">Matricula:</label>
+      <br />
+      <input type="text" id="MatriculaProfessor" name="MatriculaProfessor" required style="width: 90%; padding: 10px; border: 2px solid black; margin-bottom: 20px;"/>
+      <br />
+      <label for="DataNasc">Data de Nascimento:</label>
+      <br />
+      <input type="date" name="DataNasc" id="DataNasc" style=" padding: 10px; border: 2px solid black; width: 10%; margin-bottom: 20px;">
+      <br />
+      <input type="submit" value="Salvar" style="padding: 15px 50px; border-radius: 8px; background-color: rgba(206, 82, 82, 0.527); margin: 20px; font-weight: bold; font-size: 20px;"/>
+    </form>
+  </div>
+</html>

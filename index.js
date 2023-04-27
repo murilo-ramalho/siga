@@ -15,22 +15,22 @@ app.get("/", (req, res) => {
   homeController.index();
 });
 
-app.get("/exibirProf", (req, res) => {
+app.get("/exibir", (req, res) => {
   let homeController = new Home(req, res);
   homeController.exibir();
 });
 
-app.post("/exibirProf", (req, res) => {
+app.post("/exibir", (req, res) => {
   let arquivoController = new Arquivo(req, res);
   arquivoController.exibir();
 });
 
-app.get("/cadastrarProf", (req, res) => {
+app.get("/cadastrar", (req, res) => {
   let homeController = new Home(req, res);
   homeController.cadastrar();
 });
 
-app.post("/cadastrarProf", (req, res) => {
+app.post("/cadastrar", (req, res) => {
   let arquivoController = new Arquivo(req, res);
   arquivoController.cadastrar();
 });

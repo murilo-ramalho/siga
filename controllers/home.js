@@ -7,10 +7,10 @@ class Home {
     this.res.render("home/index");
   }
   exibir() {
-    this.res.render("home/exibirProf");
+    this.res.render("home/exibir");
   }
   cadastrar() {
-    this.res.render("home/cadastrarProf");
+    this.res.render("home/cadastrar");
   }
 }
 

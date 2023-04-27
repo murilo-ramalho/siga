@@ -1,20 +1,20 @@
-<html>
-  <div style="background-color: rgba(206, 82, 82, 0.527); margin-bottom: 5px; border-radius: 10px;">
+<html style="font-family: Arial">
+  <div style="background-color: rgba(206, 82, 82, 0.527); margin-bottom: 5px; border-radius: 10px; border: 2px solid black">
     <h1 style="margin-top: 10px; margin-left: 30px; font-size: 40px;">Home</h1>
   </div>
 
   <div style="margin-left: 50px; padding: 20px; width: 80%; border-radius: 10px;">
     <br />
-    <a href="./cadastrarProf"><button style="padding: 15px 50px; font-size: 16px; border-radius: 8px; background-color: #aaf5b7;"> Adicionar Professor </button></a>
+    <a href="./cadastrar"><button style="padding: 15px 50px; font-size: 16px; border-radius: 8px; border: 3px solid rgb(0, 138, 23); font-weight: bold; font-size: 20px;"> Adicionar Professor </button></a>
     <br />
 
     <table style="margin: 50px; font-size: 20px; padding: 40px; border: 1px solid black; width: 90%; border-radius: 10px;">
       <tr>
-        <th>001</th>
-        <th>Ana Paula Santos</th>
-        <th><a href="./exibirProf"><button  style="padding: 15px 50px; border-radius: 8px; background-color: rgb(117, 169, 228);">Exibir</button></a></th>
-        <th><a href="./alterarProf"><button  style="padding: 15px 50px; border-radius: 8px; background-color: rgba(198, 207, 69, 0.685);">Alterar</button></a></th>
-        <th><a href="./exclirProf"><button  style="padding: 15px 50px; border-radius: 8px; background-color: rgba(206, 82, 82, 0.527);">Excluir</button></a></th>
+        <th><%- nome %></th>
+        <th><%- matricula %></th>
+        <th><a href="./exibir"><button  style="padding: 15px 50px; border-radius: 8px; border: 3px solid rgb(17, 0, 255); font-weight: bold; font-size: 20px;">Exibir</button></a></th>
+        <th><a href="./alterar"><button  style="padding: 15px 50px; border-radius: 8px; border: 3px solid rgb(131, 122, 0); font-weight: bold; font-size: 20px;">Alterar</button></a></th>
+        <th><a href="./excluir"><button  style="padding: 15px 50px; border-radius: 8px; border: 3px solid rgb(255, 0, 0); font-weight: bold; font-size: 20px;">Excluir</button></a></th>
       </tr>
     </table>
   </div>
