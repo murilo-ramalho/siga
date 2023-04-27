@@ -57,5 +57,22 @@ class Arquivo {
         this.res.render("arquivo/erro");
       });
   }
+
+  alterar() {
+    let arquivo = this.req.body.arquivo;
+    let texto = this.req.body.texto;
+
+    axios
+      .post("https://6b8e7676-8581-4b94-867e-7b0aa6be4019.mock.pstmn.io/professor/:matricula", {
+        arquivo: arquivo,
+        texto: texto,
+      })
+      .then((response) => {
+        this.res.render("arquivo/sucesso");
+      })
+      .catch((e) => {
+        this.res.render("arquivo/erro");
+      });
+  }
 }
 module.exports = Arquivo;

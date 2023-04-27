@@ -12,6 +12,9 @@ class Home {
   cadastrar() {
     this.res.render("home/cadastrar");
   }
+  alterar() {
+    this.res.render("home/alterar");
+  }
 }
 
 module.exports = Home;
